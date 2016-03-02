@@ -18,8 +18,7 @@ class RestaurantsController < ApplicationController
       @restaurant = Restaurant.create!(restaurant_params)
       redirect_to restaurant_path(@restaurant)
     else
-      @restaurant = Restaurant.new(restaurant_params)
-      redirect_to new_restaurant_path
+      render :new
     end
   end
 

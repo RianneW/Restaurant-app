@@ -1,0 +1,9 @@
+<h1>Create a new review for this restaurant</h1>
+<h2><%= @restaurant.name %></h2>
+<%= form_for([@restaurant, @review]) do |f| %>
+  <%= f.label 'How was the restaurant?' %>
+  <%= f.text_field :content %>
+  <%= f.label 'How would you rate the restaurant? (number between 0-5)' %>
+  <%= f.text_field :rating %>
+  <%= f.submit %>
+<%end%>

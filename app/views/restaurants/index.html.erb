@@ -1,1 +1,8 @@
-<h1>Welcome at the Restaurant App!</h1>
+<h1>All restaurants</h1>
+<ul>
+  <% @restaurants.each do |restaurant| %>
+    <li>
+      <%= link_to restaurant.name, restaurant_path(restaurant) %>
+    </li>
+  <% end %>
+</ul>
